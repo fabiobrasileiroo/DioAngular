@@ -4,13 +4,18 @@ class TituloDinamico extends HTMLElement {
     const shadow = this.attachShadow({mode: "open"});
     //base do component
     const componentRoot = document.createElement("h1")
-    componentRoot.textContent = 'fabio'
-
+    componentRoot.textContent = this.getAttribute("titulo")// isso é um prop(propriedade)
     //estilizar o component
     const style = document.createElement('style')
     style.textContent =  document.createElement("style")
-    style.textContent =
+    style.textContent = `
+      h1 {
+        color: red;
+      }
+    `
     //enviar para a shadow
+    shadow.appendChild(componentRoot)
+    shadow.appendChild(style)
   }
 
 }
