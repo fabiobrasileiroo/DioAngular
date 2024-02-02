@@ -1,5 +1,8 @@
 "use strict";
-function printaObjeto(pessoa) {
-    console.log(pessoa);
+function concatArray(...itens) {
+    return new Array().concat(...itens);
 }
-printaObjeto({ name: 'fabio', vulgo: 'cagao' });
+const numArray = concatArray([1, 5], [3]);
+const stgArray = concatArray(["felipe", "goku"], ["vegeta"]);
+console.log(numArray);
+console.log(stgArray);
