@@ -1,0 +1,12 @@
+<!-- two data binding -->
+<app-entry-data></app-entry-data>
+<h1 style="color: red;">Ola mundao {{ title }}</h1>
+<!-- data binding = associação de dados -->
+<!-- interpolação -->
+<my-button label="{{buttonSecond}}"></my-button>
+<my-button label="Ola mundo"></my-button>
+<!-- property binding -->
+<my-button [label]="buttonLabel"></my-button>
+<my-button [label]="'Carrinhuuu'"></my-button>
+
+<router-outlet></router-outlet>
