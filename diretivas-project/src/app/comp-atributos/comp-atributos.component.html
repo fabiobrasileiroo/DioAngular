@@ -1,0 +1,24 @@
+<p [ngClass]="estilo">comp-atributos works!</p>
+<button (click)="trocar()">Change</button>
+<h2 [ngStyle]="{'background':corFundo,'color': corDaFonte}">NgStyle</h2>
+
+<hr>
+<h1>Lista de compras</h1>
+<p>Adicione um item</p>
+<input type="text" [(ngModel)]="item">
+<button (click)="adicionarLista()">Add</button>
+<p>{{ item }}</p>
+<ul>
+  <li *ngFor="let lista of listas">{{lista}}</li>
+</ul>
+<hr>
+<ng-content select="h2"></ng-content>
+<ng-template [ngIf]="isEnableBlock">
+  <a href="#">Finalizar Compra</a>
+</ng-template>
+<ng-template [ngIf]="item.trim() == ''">
+  <a href="">Adicione algo </a>
+</ng-template>
+<hr>
+<h2>NgContent</h2>
+<ng-content select="p"></ng-content>
